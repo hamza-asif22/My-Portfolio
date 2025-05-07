@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Hamza Asif Baig, a Software Engineer showcasing projects, skills, and contact information.">
+    <meta name="keywords" content="portfolio, Hamza Asif Baig, Software Engineer, MERN Stack, Frontend Development, Web Development, App Development">
+    <meta name="author" content="Hamza Asif Baig">
+    <title>Hamza Asif Baig | Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Hamza Asif Baig</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h1>Hello, I'm Hamza Asif Baig</h1>
+            <p class="subtitle">A passionate <span class="typed-text">Software Engineer</span> creating impactful solutions.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button">Explore My Work</a>
+                <a href="resume.pdf" class="cta-button secondary" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="media/pic.jpg" alt="Profile picture of Hamza Asif Baig" class="profile-picture">
+            <div class="about-text">
+                <p>
+                    As a dedicated Software Engineer, I specialize in Frontend Development, MERN Stack (MongoDB, Express.js, React, Node.js), Web Development, and App Development. 
+                    With a strong foundation in building responsive, user-centric applications, I thrive on crafting seamless digital experiences.
+                </p>
+                <p>
+                    My mission is to deliver innovative, high-quality solutions that solve real-world problems. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.
+                </p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend Development</h3>
+                <p>React, JavaScript, HTML, CSS, Tailwind CSS</p>
+            </div>
+            <div class="skill-card">
+                <h3>MERN Stack</h3>
+                <p>MongoDB, Express.js, React, Node.js</p>
+            </div>
+            <div class="skill-card">
+                <h3>App Development</h3>
+                <p>React Native, Flutter, Firebase</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools & DevOps</h3>
+                <p>Git, Docker, AWS, Webpack</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>A web application built with React and Node.js. Solves [Problem].</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <p>A mobile app developed with React Native. Enhances [Feature].</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400" alt="Project 3">
+                <div class="project-info">
+                    <h3>Project Three</h3>
+                    <p>A full-stack MERN application. Improves [Aspect].</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Hamza delivered exceptional work, exceeding our expectations!"</p>
+                <h4>Client Name, Company</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Professional, creative, and a pleasure to work with."</p>
+                <h4>Client Name, Company</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Let's collaborate on your next project!</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com" aria-label="Email">Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Hamza Asif Baig. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
