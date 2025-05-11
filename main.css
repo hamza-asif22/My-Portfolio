@@ -323,8 +323,8 @@ h2:hover::after {
 }
 
 .profile-picture:hover {
-    transform: scale(1.05) rotate(2deg);
-    filter: brightness(1.1);
+    transform: scale(1.05) rotate(0.5deg);
+    filter: brightness(1.3);
 }
 
 .about-text {
