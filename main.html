@@ -8,19 +8,26 @@
     <meta name="author" content="Hamza Asif Baig">
     <title>Hamza Asif Baig | Portfolio</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">Hamza Asif Baig</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -33,10 +40,10 @@
     <section id="home">
         <div class="hero">
             <h1>Hello, I'm Hamza Asif Baig</h1>
-            <p class="subtitle">A passionate <span class="typed-text">Software Engineer</span> creating impactful solutions.</p>
+            <p class="subtitle">A passionate <span class="typed-text">Software Engineer</span></p>
             <div class="hero-buttons">
                 <a href="#projects" class="cta-button">Explore My Work</a>
-                <a href="resume.pdf" class="cta-button secondary" download>Download Resume</a>
+                <a href="HamzaCV.pdf" class="cta-button secondary" download>Download Resume</a>
             </div>
         </div>
     </section>
@@ -44,13 +51,12 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="media/pic.jpg" alt="Profile picture of Hamza Asif Baig" class="profile-picture">
+            <img src="media/pic1.JPG" alt="Profile picture of Hamza Asif Baig" class="profile-picture">
             <div class="about-text">
                 <p>
-                    As a dedicated Software Engineer, I specialize in Frontend Development, MERN Stack (MongoDB, Express.js, React, Node.js), Web Development, and App Development. 
-                    With a strong foundation in building responsive, user-centric applications, I thrive on crafting seamless digital experiences.
+                    I am a final-year Software Engineering student at COMSATS University Lahore Campus with hands-on experience in full-stack web development, mobile app development, and artificial intelligence. My expertise spans the MERN stack, Flutter, and the development of AI-powered tools, with a strong emphasis on solving real-world problems through technology. I thrive in collaborative environments, enjoy tackling complex challenges, and continuously seek opportunities to grow both technically and professionally. From creating intelligent applications like a posture-analysis martial arts app to building efficient web systems, I’m passionate about using code to make a meaningful impact.
                 </p>
-                <p>
+                <p class="italic-text">
                     My mission is to deliver innovative, high-quality solutions that solve real-world problems. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.
                 </p>
                 <a href="#contact" class="cta-button">Get in Touch</a>
@@ -59,23 +65,31 @@
     </section>
 
     <section id="skills">
-        <h2>My Skills</h2>
+        <h2>Skills & Expertise</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>Frontend Development</h3>
-                <p>React, JavaScript, HTML, CSS, Tailwind CSS</p>
+                <p>React.js, HTML, CSS, Tailwind CSS</p>
             </div>
             <div class="skill-card">
                 <h3>MERN Stack</h3>
-                <p>MongoDB, Express.js, React, Node.js</p>
+                <p>MongoDB, Express.js, React.js, Node.js</p>
             </div>
             <div class="skill-card">
                 <h3>App Development</h3>
-                <p>React Native, Flutter, Firebase</p>
+                <p>Flutter, Dart, Firebase</p>
             </div>
             <div class="skill-card">
-                <h3>Tools & DevOps</h3>
-                <p>Git, Docker, AWS, Webpack</p>
+                <h3>Artificial Intelligence</h3>
+                <p>AI Tools, Machine Learning, Python, Small AI Models</p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend & APIs</h3>
+                <p>Node.js, Express.js, Flask</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools & Soft Skills</h3>
+                <p>Postman, Google Colab, Team Leadership, Communication</p>
             </div>
         </div>
     </section>
@@ -83,75 +97,340 @@
     <section id="projects">
         <h2>Featured Projects</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400" alt="Project 1">
+            <div class="project-card" data-project-id="0">
+                <img src="media/book1.png" alt="Books Management System">
                 <div class="project-info">
-                    <h3>Project One</h3>
-                    <p>A web application built with React and Node.js. Solves [Problem].</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h3>Books Management System</h3>
+                    <p class="italic-text">A full-stack application built with the MERN stack to manage and organize books. APIs tested with Postman.</p>
+                    <button class="project-link" onclick="openProjectModal(0)">View Project</button>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400" alt="Project 2">
+            <div class="project-card" data-project-id="1">
+                <img src="media/codesm1.png" alt="Code Smell Detection Tool">
                 <div class="project-info">
-                    <h3>Project Two</h3>
-                    <p>A mobile app developed with React Native. Enhances [Feature].</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h3>Code Smell Detection Tool</h3>
+                    <p class="italic-text">Python-based tool that analyzes Python code for code smells. Built with Flask for the web interface.</p>
+                    <button class="project-link" onclick="openProjectModal(1)">View Project</button>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/400" alt="Project 3">
+            <div class="project-card" data-project-id="2">
+                <img src="https://via.placeholder.com/400" alt="Kokoro Dojo App">
                 <div class="project-info">
-                    <h3>Project Three</h3>
-                    <p>A full-stack MERN application. Improves [Aspect].</p>
-                    <a href="#" class="project-link">View Project</a>
+                    <h3>Kokoro Dojo App</h3>
+                    <p class="italic-text">A Flutter-based martial arts app using AI-powered posture analysis to guide users in training techniques. Final year project.</p>
+                    <button class="project-link" onclick="openProjectModal(2)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project-id="3">
+                <img src="media/asl1.png" alt="American Sign Language Detection">
+                <div class="project-info">
+                    <h3>American Sign Language Detection</h3>
+                    <p class="italic-text">AI model with 90% accuracy to detect hand signs. Built with Python and trained on Google Colab to assist people with disabilities.</p>
+                    <button class="project-link" onclick="openProjectModal(3)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project-id="4">
+                <img src="media/num1.png" alt="Number Plate Detection">
+                <div class="project-info">
+                    <h3>Number Plate Detection</h3>
+                    <p class="italic-text">Python and Django-based system to detect car number plates with 70% accuracy using image segmentation techniques.</p>
+                    <button class="project-link" onclick="openProjectModal(4)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project-id="5">
+                <img src="media/box1.png" alt="Boxing Website Frontend">
+                <div class="project-info">
+                    <h3>Boxing Website Frontend</h3>
+                    <p class="italic-text">Frontend for a boxing website built using React.js, Tailwind CSS, and Vite for fast performance and clean UI.</p>
+                    <button class="project-link" onclick="openProjectModal(5)">View Project</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials">
-        <h2>What Clients Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"Hamza delivered exceptional work, exceeding our expectations!"</p>
-                <h4>Client Name, Company</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"Professional, creative, and a pleasure to work with."</p>
-                <h4>Client Name, Company</h4>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="education-item">
+                <h3>Bachelor of Science in Software Engineering</h3>
+                <p class="italic-text">COMSATS University Islamabad, Lahore Campus | 2021 - Present</p>
+                <p>Final-year student with a focus on full-stack development, AI, and mobile app development.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Let's collaborate on your next project!</p>
-        <form class="contact-form">
+        <p class="italic-text">Let's collaborate on your next project!</p>
+        <form class="contact-form" id="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="cta-button">Send Message</button>
+            <p class="form-message"></p>
         </form>
         <div class="contact-links">
-            <a href="mailto:your.email@example.com" aria-label="Email">Email</a>
+            <a href="mailto:hamzaasifbaig190@gmail.com" aria-label="Email">Email</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">LinkedIn</a>
             <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">GitHub</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 Hamza Asif Baig. All Rights Reserved.</p>
+        <p class="italic-text">© 2025 Hamza Asif Baig. All Rights Reserved.</p>
     </footer>
 
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeProjectModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <video id="modalVideo" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p id="modalDescription" class="italic-text"></p>
+            <h3>Technologies Used</h3>
+            <ul id="modalTechnologies"></ul>
+        </div>
+    </div>
+
     <script>
-        // Simple hamburger menu toggle
+        // Project data
+        const projects = [
+            {
+                title: "Books Management System",
+                description: "A comprehensive full-stack application designed to manage and organize books efficiently. Features include CRUD operations, user authentication, and a responsive UI. APIs were rigorously tested using Postman to ensure reliability.",
+                technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Postman"],
+                video: "media/book1.mp4"
+            },
+            {
+                title: "Code Smell Detection Tool",
+                description: "A Python-based tool that analyzes Python code to identify code smells, improving code quality. The web interface, built with Flask, allows users to upload code and view detailed analysis reports.",
+                technologies: ["Python", "Flask", "HTML", "CSS"],
+                video: "media/codesm1.mp4"
+            },
+            {
+                title: "Kokoro Dojo App",
+                description: "A Flutter-based mobile app for martial arts training, utilizing AI-powered posture analysis to provide real-time feedback on techniques. This final-year project integrates Firebase for data storage and user management.",
+                technologies: ["Flutter", "Dart", "Firebase", "AI", "Python"],
+                video: "media/kokoro1.mp4"
+            },
+            {
+                title: "American Sign Language Detection",
+                description: "An AI model achieving 90% accuracy in detecting hand signs for American Sign Language. Built with Python and trained on Google Colab, this project aims to assist people with disabilities in communication.",
+                technologies: ["Python", "Machine Learning", "Google Colab"],
+                video: "media/asl1.mp4"
+            },
+            {
+                title: "Number Plate Detection",
+                description: "A Python and Django-based system that detects car number plates with 70% accuracy using image segmentation techniques. The application includes a web interface for uploading and processing images.",
+                technologies: ["Python", "Django", "OpenCV", "Machine Learning"],
+                video: "media/num1.mp4"
+            },
+            {
+                title: "Boxing Website Frontend",
+                description: "A high-performance frontend for a boxing website, built with React.js, Tailwind CSS, and Vite. The project focuses on delivering a clean, responsive UI with fast load times and smooth animations.",
+                technologies: ["React.js", "Tailwind CSS", "Vite", "JavaScript"],
+                video: "media/box1.mp4"
+            }
+        ];
+
+        // Open modal
+        function openProjectModal(projectId) {
+            const project = projects[projectId];
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('modalDescription').textContent = project.description;
+            const video = document.getElementById('modalVideo');
+            video.querySelector('source').src = project.video;
+            video.load();
+            const techList = document.getElementById('modalTechnologies');
+            techList.innerHTML = project.technologies.map(tech => `<li>${tech}</li>`).join('');
+            document.getElementById('projectModal').style.display = 'flex';
+            gsap.from('.modal-content', {
+                opacity: 0,
+                y: 50,
+                duration: 0.5,
+                ease: 'power3.out'
+            });
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        // Close modal
+        function closeProjectModal() {
+            document.getElementById('projectModal').style.display = 'none';
+            document.getElementById('modalVideo').pause();
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('projectModal')) {
+                closeProjectModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+
+        // Fallback to hide preloader
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+
+        // Hamburger menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('open');
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('.nav-link, .cta-button[href*="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    gsap.to(link, {
+                        scale: 0.9,
+                        duration: 0.2,
+                        ease: 'power1.inOut',
+                        onComplete: () => {
+                            gsap.to(link, { scale: 1, duration: 0.2 });
+                        }
+                    });
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        hamburger.classList.remove('open');
+                    }
+                }
+            });
+        });
+
+        // Typed.js with fallback
+        try {
+            const typed = new Typed('.typed-text', {
+                strings: ['Software Engineer', 'Frontend Developer', 'App Developer'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 1000,
+                loop: true,
+            });
+        } catch (e) {
+            console.error('Typed.js failed to load:', e);
+            document.querySelector('.typed-text').textContent = 'Software Engineer';
+        }
+
+        // GSAP Animations with fallback
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from('.hero h1', {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: 'power3.out',
+            });
+            gsap.from('.hero .subtitle', {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: 0.3,
+                ease: 'power3.out',
+            });
+            gsap.from('.hero-buttons', {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: 0.6,
+                ease: 'power3.out',
+            });
+
+            gsap.utils.toArray('section').forEach((section) => {
+                gsap.from(section.querySelectorAll('h2, .skill-card, .project-card, .testimonial-card, .contact-form, .contact-links, .education-item'), {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none',
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: 'power3.out',
+                });
+            });
+
+            gsap.to('#home', {
+                scrollTrigger: {
+                    trigger: '#home',
+                    scrub: true,
+                    start: 'top top',
+                    end: 'bottom top',
+                },
+                backgroundPositionY: '20%',
+            });
+        } else {
+            console.error('GSAP not loaded');
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '1';
+            });
+        }
+
+        // Active navigation link highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinksItems = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinksItems.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission (mock)
+        const form = document.getElementById('contact-form');
+        const formMessage = document.querySelector('.form-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formMessage.textContent = 'Sending message...';
+            formMessage.style.color = '#3b82f6';
+
+            setTimeout(() => {
+                formMessage.textContent = 'Message sent successfully!';
+                formMessage.style.color = '#10b981';
+                form.reset();
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 3000);
+            }, 1000);
         });
     </script>
 </body>
