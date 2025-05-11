@@ -153,28 +153,23 @@
         <div class="education-content">
             <div class="education-item">
                 <h3>Bachelor of Science in Software Engineering</h3>
-                <p class="italic-text">COMSATS University Islamabad, Lahore Campus | 2021 - Present</p>
-                <p>Final-year student with a focus on full-stack development, AI, and mobile app development.</p>
+                <p class="italic-text">COMSATS University Islamabad, Lahore Campus | 2022 - Present</p>
+                <p class="italic-text">CGPA: 2.89</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p class="italic-text">Let's collaborate on your next project!</p>
-        <form class="contact-form" id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta-button">Send Message</button>
-            <p class="form-message"></p>
-        </form>
-        <div class="contact-links">
-            <a href="mailto:hamzaasifbaig190@gmail.com" aria-label="Email">Email</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-            <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">GitHub</a>
-        </div>
-    </section>
+   <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+        <p><strong>Email:</strong> <a href="mailto:hamzaasifbaig190@gmail.com" aria-label="Email">hamzaasifbaig190@gmail.com</a></p>
+        <p><strong>Mobile:</strong> <a href="tel:+923038875757" aria-label="Phone">+92 303 8875757</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/hamza-asif-baig-a23512276" target="_blank" aria-label="LinkedIn">linkedin.com/in/hamza-asif-baig-a23512276</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/hamza-asif22" target="_blank" aria-label="GitHub">github.com/hamza-asif22</a></p>
+    </div>
+</section>
+
+
 
     <footer>
         <p class="italic-text">© 2025 Hamza Asif Baig. All Rights Reserved.</p>
@@ -183,12 +178,15 @@
     <!-- Project Modal -->
     <div class="project-modal" id="projectModal">
         <div class="modal-content">
-            <span class="close-button" onclick="closeProjectModal()">&times;</span>
+            <span class="close-button" onclick="closeProjectModal()">×</span>
             <h2 id="modalTitle"></h2>
-            <video id="modalVideo" controls>
-                <source src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="modal-media">
+                <video id="modalVideo" controls style="display: none;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img id="modalImage" src="" alt="Project Image" style="display: none;">
+            </div>
             <p id="modalDescription" class="italic-text"></p>
             <h3>Technologies Used</h3>
             <ul id="modalTechnologies"></ul>
@@ -200,67 +198,144 @@
         const projects = [
             {
                 title: "Books Management System",
-                description: "A comprehensive full-stack application designed to manage and organize books efficiently. Features include CRUD operations, user authentication, and a responsive UI. APIs were rigorously tested using Postman to ensure reliability.",
+                description: "A full-stack MERN application developed using Visual Studio Code to manage books with basic CRUD operations. Postman was used to verify API endpoints, ensuring robust backend functionality.",
                 technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Postman"],
-                video: "media/book1.mp4"
+                video: "media/Book-Management.mp4"
             },
             {
                 title: "Code Smell Detection Tool",
-                description: "A Python-based tool that analyzes Python code to identify code smells, improving code quality. The web interface, built with Flask, allows users to upload code and view detailed analysis reports.",
+                description: "A tool developed in Python to detect code smells in Python files or entire projects. The frontend was rendered using Flask, providing users with a simple interface for code upload and analysis.",
                 technologies: ["Python", "Flask", "HTML", "CSS"],
-                video: "media/codesm1.mp4"
+                video: "media/Code-Smell-Detection.mp4"
             },
             {
                 title: "Kokoro Dojo App",
-                description: "A Flutter-based mobile app for martial arts training, utilizing AI-powered posture analysis to provide real-time feedback on techniques. This final-year project integrates Firebase for data storage and user management.",
-                technologies: ["Flutter", "Dart", "Firebase", "AI", "Python"],
+                description: "A Flutter-based martial arts training app built as a final year project. Integrates an AI posture analysis model that evaluates users' training techniques. Firebase handles user data and app backend. This project is currently under development.",
+                technologies: ["Flutter", "Dart", "Firebase", "AI", "Python", "Machine Learning"],
                 video: "media/kokoro1.mp4"
             },
             {
                 title: "American Sign Language Detection",
-                description: "An AI model achieving 90% accuracy in detecting hand signs for American Sign Language. Built with Python and trained on Google Colab, this project aims to assist people with disabilities in communication.",
+                description: "An AI-powered Python application with 90% accuracy in recognizing American Sign Language (ASL) gestures. The model was trained using Google Colab to assist individuals with speech or hearing disabilities.",
                 technologies: ["Python", "Machine Learning", "Google Colab"],
-                video: "media/asl1.mp4"
+                image: "media/asl1.png"
             },
             {
                 title: "Number Plate Detection",
-                description: "A Python and Django-based system that detects car number plates with 70% accuracy using image segmentation techniques. The application includes a web interface for uploading and processing images.",
-                technologies: ["Python", "Django", "OpenCV", "Machine Learning"],
-                video: "media/num1.mp4"
+                description: "Developed with Python and Django, this system performs image segmentation to detect car number plates with approximately 70% accuracy. A web interface was created for image uploads and result display.",
+                technologies: ["Python", "Django", "OpenCV", "Image Processing"],
+                video: "media/Detect-Number-Plate.mp4"
             },
             {
                 title: "Boxing Website Frontend",
-                description: "A high-performance frontend for a boxing website, built with React.js, Tailwind CSS, and Vite. The project focuses on delivering a clean, responsive UI with fast load times and smooth animations.",
+                description: "A React.js-based boxing website frontend designed using Tailwind CSS and Vite in Visual Studio Code. The focus was on delivering a responsive and clean user interface.",
                 technologies: ["React.js", "Tailwind CSS", "Vite", "JavaScript"],
-                video: "media/box1.mp4"
+                video: "media/Ring-Warriors.mp4"
             }
         ];
 
         // Open modal
         function openProjectModal(projectId) {
-            const project = projects[projectId];
-            document.getElementById('modalTitle').textContent = project.title;
-            document.getElementById('modalDescription').textContent = project.description;
-            const video = document.getElementById('modalVideo');
-            video.querySelector('source').src = project.video;
-            video.load();
-            const techList = document.getElementById('modalTechnologies');
-            techList.innerHTML = project.technologies.map(tech => `<li>${tech}</li>`).join('');
-            document.getElementById('projectModal').style.display = 'flex';
-            gsap.from('.modal-content', {
-                opacity: 0,
-                y: 50,
-                duration: 0.5,
-                ease: 'power3.out'
-            });
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            try {
+                const project = projects[projectId];
+                if (!project) {
+                    console.error(`Project with ID ${projectId} not found`);
+                    alert('Project not found. Please try another project.');
+                    return;
+                }
+
+                // Reset modal content
+                const modalTitle = document.getElementById('modalTitle');
+                const modalDescription = document.getElementById('modalDescription');
+                const modalVideo = document.getElementById('modalVideo');
+                const modalImage = document.getElementById('modalImage');
+                const modalTechnologies = document.getElementById('modalTechnologies');
+                const projectModal = document.getElementById('projectModal');
+
+                modalTitle.textContent = project.title;
+                modalDescription.textContent = project.description;
+                modalTechnologies.innerHTML = project.technologies.map(tech => `<li>${tech}</li>`).join('');
+
+                // Handle video or image
+                modalVideo.style.display = 'none';
+                modalImage.style.display = 'none';
+                if (project.video) {
+                    const videoSource = modalVideo.querySelector('source');
+                    videoSource.src = project.video;
+                    modalVideo.load();
+                    modalVideo.style.display = 'block';
+                } else if (project.image) {
+                    modalImage.src = project.image;
+                    modalImage.alt = `${project.title} Image`;
+                    modalImage.style.display = 'block';
+                } else {
+                    console.warn(`No video or image for project: ${project.title}`);
+                }
+
+                // Show modal
+                projectModal.style.display = 'flex';
+                projectModal.style.visibility = 'visible';
+                projectModal.style.opacity = '1';
+                projectModal.classList.add('active');
+
+                // GSAP animation with fallback
+                if (typeof gsap !== 'undefined') {
+                    gsap.fromTo('.modal-content', 
+                        { opacity: 0, y: 50 },
+                        { 
+                            opacity: 1, 
+                            y: 0, 
+                            duration: 0.5, 
+                            ease: 'power3.out',
+                            onComplete: () => {
+                                document.querySelector('.modal-content').style.opacity = '1';
+                                document.querySelector('.modal-content').style.transform = 'none';
+                            }
+                        }
+                    );
+                } else {
+                    document.querySelector('.modal-content').style.opacity = '1';
+                    document.querySelector('.modal-content').style.transform = 'none';
+                }
+
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } catch (error) {
+                console.error('Error opening modal:', error);
+                alert('Failed to open project details. Please try again.');
+            }
         }
 
         // Close modal
         function closeProjectModal() {
-            document.getElementById('projectModal').style.display = 'none';
-            document.getElementById('modalVideo').pause();
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            const projectModal = document.getElementById('projectModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const modalImage = document.getElementById('modalImage');
+
+            if (typeof gsap !== 'undefined') {
+                gsap.to('.modal-content', {
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.3,
+                    ease: 'power3.in',
+                    onComplete: () => {
+                        projectModal.style.display = 'none';
+                        projectModal.style.visibility = 'hidden';
+                        projectModal.classList.remove('active');
+                        modalVideo.pause();
+                        modalVideo.querySelector('source').src = '';
+                        modalImage.src = '';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            } else {
+                projectModal.style.display = 'none';
+                projectModal.style.visibility = 'hidden';
+                projectModal.classList.remove('active');
+                modalVideo.pause();
+                modalVideo.querySelector('source').src = '';
+                modalImage.src = '';
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // Close modal on outside click
@@ -362,7 +437,7 @@
             });
 
             gsap.utils.toArray('section').forEach((section) => {
-                gsap.from(section.querySelectorAll('h2, .skill-card, .project-card, .testimonial-card, .contact-form, .contact-links, .education-item'), {
+                gsap.from(section.querySelectorAll('h2, .skill-card, .project-card, .education-item, .contact-form, .contact-links'), {
                     scrollTrigger: {
                         trigger: section,
                         start: 'top 80%',
