@@ -9,6 +9,7 @@
     <title>Hamza Asif Baig | Portfolio</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -86,7 +87,7 @@
             </div>
             <div class="skill-card">
                 <h3>Tools & Soft Skills</h3>
-                <p>Postman, Google Colab, Team Leadership, Communication</p>
+                <p>Postman, Google Colab, Team Allen, Communication</p>
             </div>
         </div>
     </section>
@@ -156,17 +157,31 @@
         </div>
     </section>
 
-   <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-links">
-        <p><strong>Email:</strong> <a href="mailto:hamzaasifbaig190@gmail.com" aria-label="Email">hamzaasifbaig190@gmail.com</a></p>
-        <p><strong>Mobile:</strong> <a href="tel:+923038875757" aria-label="Phone">+92 303 8875757</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/hamza-asif-baig-a23512276" target="_blank" aria-label="LinkedIn">linkedin.com/in/hamza-asif-baig-a23512276</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/hamza-asif22" target="_blank" aria-label="GitHub">github.com/hamza-asif22</a></p>
-    </div>
-</section>
-
-
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3>Email</h3>
+                <a href="mailto:hamzaasifbaig190@gmail.com" aria-label="Email">hamzaasifbaig190@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone contact-icon"></i>
+                <h3>Mobile</h3>
+                <a href="tel:+923038875757" aria-label="Phone">+92 303 8875757</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-linkedin contact-icon"></i>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/hamza-asif-baig-a23512276" target="_blank" aria-label="LinkedIn">hamza-asif-baig</a>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-github contact-icon"></i>
+                <h3>GitHub</h3>
+                <a href="https://github.com/hamza-asif22" target="_blank" aria-label="GitHub">hamza-asif22</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p class="italic-text">© 2025 Hamza Asif Baig. All Rights Reserved.</p>
@@ -434,7 +449,7 @@
             });
 
             gsap.utils.toArray('section').forEach((section) => {
-                gsap.from(section.querySelectorAll('h2, .skill-card, .project-card, .education-item, .contact-form, .contact-links'), {
+                gsap.from(section.querySelectorAll('h2, .skill-card, .project-card, .education-item, .contact-form, .contact-grid'), {
                     scrollTrigger: {
                         trigger: section,
                         start: 'top 80%',
@@ -484,25 +499,6 @@
                     link.classList.add('active');
                 }
             });
-        });
-
-        // Form submission (mock)
-        const form = document.getElementById('contact-form');
-        const formMessage = document.querySelector('.form-message');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formMessage.textContent = 'Sending message...';
-            formMessage.style.color = '#3b82f6';
-
-            setTimeout(() => {
-                formMessage.textContent = 'Message sent successfully!';
-                formMessage.style.color = '#10b981';
-                form.reset();
-                setTimeout(() => {
-                    formMessage.textContent = '';
-                }, 3000);
-            }, 1000);
         });
     </script>
 </body>
