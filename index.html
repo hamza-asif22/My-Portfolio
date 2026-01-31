@@ -25,6 +25,7 @@
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
@@ -41,10 +42,10 @@
     <section id="home">
         <div class="hero">
             <h1>Hello, I'm Hamza Asif Baig</h1>
-            <p class="subtitle">A passionate <span class="typed-text">Software Engineer</span></p>
+            <p class="subtitle">A passionate <span class="typed-text"></span></p>
             <div class="hero-buttons">
                 <a href="#projects" class="cta-button">Explore My Work</a>
-                <a href="HamzaCV.pdf" class="cta-button secondary" download>Download Resume</a>
+                <a href="Software Engineer - Hamza Asif.pdf" class="cta-button secondary" download>Download Resume</a>
             </div>
         </div>
     </section>
@@ -55,39 +56,67 @@
             <img src="media/pic1.JPG" alt="Profile picture of Hamza Asif Baig" class="profile-picture">
             <div class="about-text">
                 <p>
-                    I am a final-year Software Engineering student at COMSATS University Lahore Campus with hands-on experience in full-stack web development, mobile app development, and artificial intelligence. My expertise spans the MERN stack, Flutter, and the development of AI-powered tools, with a strong emphasis on solving real-world problems through technology. I thrive in collaborative environments, enjoy tackling complex challenges, and continuously seek opportunities to grow both technically and professionally. From creating intelligent applications like a posture-analysis martial arts app to building efficient web systems, I’m passionate about using code to make a meaningful impact.
-                </p>
+I am a BS Software Engineering graduate from COMSATS University with a strong interest in full-stack development, problem solving, artificial intelligence, and machine learning. I enjoy building real-world applications that combine clean architecture, structured design patterns, and practical technology solutions.
+</p>
+
+<p>
+I have hands-on experience working with the MERN stack, Flutter, Python, Firebase, MongoDB, and FastAPI. I have developed several impactful academic and personal projects using these technologies, focusing on performance, usability, and scalable system design.
+</p>
+
+<p>
+My work includes the Kokoro Dojo martial arts training app (Final Year Project), a lung disease prediction system using machine learning, a Python-based code smell detection tool, an SEO-optimized AI-integrated e-commerce platform, and a number plate detection system using OpenCV. I am passionate about learning new technologies, writing clean maintainable code, and turning ideas into practical software solutions.
+</p>
+
                 <a href="#contact" class="cta-button">Get in Touch</a>
             </div>
         </div>
     </section>
 
+    <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-content">
+
+        <div class="experience-item">
+            <h3>Flutter Application Development Intern</h3>
+            <p class="">Punjab Information Technology Board (PITB), Arfa Karim | July, 2025 – Sep, 2025</p>
+            <ul>
+                <li>Developed and maintained Flutter application using MVC architecture and state management that made my code 70% clean  
+and 20% fast.</li>
+                <li>Created responsive, user-friendly mobile interfaces optimized for every Android device using modern UI/UX standards.</li>
+                <li>Implemented Firebase authentication and Firestore database integration so user can stay secure and store data.</li>
+                <li>Collaborated with a professional dev team of 10+ people using industry workflow and understanding them.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
     <section id="skills">
-        <h2>Skills & Expertise</h2>
+        <h2>Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>Frontend Development</h3>
-                <p>React.js, HTML, CSS, Tailwind CSS</p>
+                <h3>Languages</h3>
+                <p>Dart, Python</p>
             </div>
             <div class="skill-card">
-                <h3>MERN Stack</h3>
-                <p>MongoDB, Express.js, React.js, Node.js</p>
+                <h3>Mobile</h3>
+                <p>Flutter, State-Management, MVVM, Rest APIs</p>
             </div>
             <div class="skill-card">
-                <h3>App Development</h3>
-                <p>Flutter, Dart, Firebase</p>
+                <h3>Web</h3>
+                <p>React.js, Node.js, Express, MERN, APIs</p>
             </div>
             <div class="skill-card">
-                <h3>Artificial Intelligence</h3>
-                <p>AI Tools, Machine Learning, Python, Small AI Models</p>
+                <h3>Database</h3>
+                <p>MongoDB, Firebase, SQL</p>
             </div>
             <div class="skill-card">
-                <h3>Backend & APIs</h3>
-                <p>Node.js, Express.js, Flask</p>
+                <h3>AI/ML</h3>
+                <p>Computer Vision, Model Training</p>
             </div>
             <div class="skill-card">
-                <h3>Tools & Soft Skills</h3>
-                <p>Postman, Google Colab, Team Allen, Communication</p>
+                <h3>Tools</h3>
+                <p>GitHub, Postman, Android Studio, VS Code</p>
             </div>
         </div>
     </section>
@@ -151,8 +180,8 @@
         <div class="education-content">
             <div class="education-item">
                 <h3>Bachelor of Science in Software Engineering</h3>
-                <p class="italic-text">COMSATS University Islamabad, Lahore Campus | 2022 - Present</p>
-                <p class="italic-text">CGPA: 2.89</p>
+                <p class="italic-text">COMSATS University Islamabad, Lahore Campus | Feb 2022 - Jan 2026</p>
+                <p class="italic-text">CGPA: 2.97</p>
             </div>
         </div>
     </section>
@@ -184,7 +213,7 @@
     </section>
 
     <footer>
-        <p class="italic-text">© 2025 Hamza Asif Baig. All Rights Reserved.</p>
+        <p class="italic-text">© 2026 Hamza Asif Baig. All Rights Reserved.</p>
     </footer>
 
     <!-- Project Modal -->
@@ -412,11 +441,15 @@
         // Typed.js with fallback
         try {
             const typed = new Typed('.typed-text', {
-                strings: ['Software Engineer', 'Frontend Developer', 'App Developer'],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 1000,
-                loop: true,
+                strings: ['Software Engineer'],
+                typeSpeed: 60,
+                backSpeed: 0,
+                backDelay: 0,
+                loop: false,
+                showCursor: true,
+    onComplete: () => {
+        document.querySelector('.typed-cursor').style.display = 'none';
+    }
             });
         } catch (e) {
             console.error('Typed.js failed to load:', e);
