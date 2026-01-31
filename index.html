@@ -394,13 +394,29 @@ and 20% fast.</li>
         });
 
         // Fallback to hide preloader
-        window.addEventListener('load', () => {
-            const preloader = document.querySelector('.preloader');
-            preloader.style.opacity = '0';
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
-        });
+        // window.addEventListener('load', () => {
+        //     const preloader = document.querySelector('.preloader');
+        //     preloader.style.opacity = '0';
+        //     setTimeout(() => {
+        //         preloader.style.display = 'none';
+        //     }, 500);
+        // });
+        function hidePreloader() {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+}
+
+// Hide normally when page loads
+window.addEventListener('load', hidePreloader);
+
+// 🔥 Safety fallback (fixes Netlify stuck loading)
+setTimeout(hidePreloader, 2000);
+
 
         // Hamburger menu toggle
         const hamburger = document.querySelector('.hamburger');
