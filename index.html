@@ -363,6 +363,12 @@
       </div>
     </div>
 
+    <!-- Fullscreen Image Viewer for Mobile -->
+    <div class="fullscreen-viewer" id="fullscreenViewer">
+      <button class="fullscreen-close" id="fullscreenClose" aria-label="Close fullscreen view">×</button>
+      <img id="fullscreenImage" src="" alt="Fullscreen view">
+    </div>
+
     <script>
       // Project data
       const projects = [
@@ -466,6 +472,55 @@
       let currentSlide = 0;
       let currentProjectImages = [];
 
+      // Fullscreen Image Viewer Functions
+      function openFullscreenImage(imageSrc, imageAlt) {
+        const fullscreenViewer = document.getElementById('fullscreenViewer');
+        const fullscreenImage = document.getElementById('fullscreenImage');
+        
+        fullscreenImage.src = imageSrc;
+        fullscreenImage.alt = imageAlt || 'Fullscreen image';
+        
+        fullscreenViewer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeFullscreenImage() {
+        const fullscreenViewer = document.getElementById('fullscreenViewer');
+        fullscreenViewer.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Touch swipe support for fullscreen viewer
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchEndX = 0;
+      let touchEndY = 0;
+
+      function handleTouchStart(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      }
+
+      function handleTouchEnd(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+      }
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+
+        // Check if vertical swipe is more significant than horizontal
+        if (Math.abs(diffY) > Math.abs(diffX)) {
+          // Swipe down to close
+          if (diffY > swipeThreshold) {
+            closeFullscreenImage();
+          }
+        }
+      }
+
       // Slider functionality
       function changeSlide(direction) {
         if (currentProjectImages.length === 0) return;
@@ -533,6 +588,13 @@
               image.src = img;
               image.alt = `${project.title} - Image ${index + 1}`;
               image.loading = 'lazy';
+              
+              // Add click event for fullscreen on mobile
+              if (window.innerWidth <= 768) {
+                image.addEventListener('click', function() {
+                  openFullscreenImage(this.src, this.alt);
+                });
+              }
 
               slide.appendChild(image);
               modalSliderWrapper.appendChild(slide);
@@ -556,6 +618,13 @@
             image.src = project.image;
             image.alt = project.title;
             image.loading = 'lazy';
+            
+            // Add click event for fullscreen on mobile
+            if (window.innerWidth <= 768) {
+              image.addEventListener('click', function() {
+                openFullscreenImage(this.src, this.alt);
+              });
+            }
 
             slide.appendChild(image);
             modalSliderWrapper.appendChild(slide);
@@ -813,8 +882,29 @@
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") {
             closeProjectModal();
+            closeFullscreenImage();
           }
         });
+
+        // Fullscreen viewer close button
+        const fullscreenClose = document.getElementById('fullscreenClose');
+        if (fullscreenClose) {
+          fullscreenClose.addEventListener('click', closeFullscreenImage);
+        }
+
+        // Close fullscreen on background click
+        const fullscreenViewer = document.getElementById('fullscreenViewer');
+        if (fullscreenViewer) {
+          fullscreenViewer.addEventListener('click', function(e) {
+            if (e.target === this) {
+              closeFullscreenImage();
+            }
+          });
+
+          // Add touch swipe support
+          fullscreenViewer.addEventListener('touchstart', handleTouchStart, false);
+          fullscreenViewer.addEventListener('touchend', handleTouchEnd, false);
+        }
       });
     </script>
   </body>

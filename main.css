@@ -267,6 +267,96 @@ section {
     display: none;
 }
 
+/* Fullscreen Image Viewer for Mobile */
+.fullscreen-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fullscreen-viewer.active {
+    display: flex;
+    opacity: 1;
+}
+
+.fullscreen-viewer img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    touch-action: pan-x pan-y pinch-zoom;
+}
+
+.fullscreen-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #1e293b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fullscreen-close:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.fullscreen-close:active {
+    transform: scale(0.95);
+}
+
+/* Make modal images clickable on mobile */
+@media (max-width: 768px) {
+    .modal-content img,
+    .slider-wrapper .slide img {
+        cursor: pointer;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        position: relative;
+    }
+    
+    .modal-content img:active,
+    .slider-wrapper .slide img:active {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+
+    /* Add tap hint */
+    .modal-media::after {
+        content: '👆 Tap image to view fullscreen';
+        display: block;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #6b7280;
+        margin-top: 0.5rem;
+        font-style: italic;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+    }
+}
+
 .hero {
     position: relative;
     z-index: 2;
@@ -428,7 +518,7 @@ h2:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-    align-items: start; /* Ensures all cards align to the top */
+    align-items: stretch;
 }
 
 .skill-card {
@@ -440,7 +530,6 @@ h2:hover::after {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
     position: relative;
     overflow: hidden;
-    height: 100%; /* Make all cards full height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -542,7 +631,7 @@ h2:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    align-items: start; /* Ensures all cards align to the top */
+    align-items: stretch; /* Changed from start to stretch for equal heights */
 }
 
 .project-card {
@@ -552,7 +641,6 @@ h2:hover::after {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    height: 100%; /* Make all cards full height of their grid cell */
     display: flex;
     flex-direction: column;
 }
@@ -697,7 +785,7 @@ h2:hover::after {
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: start; /* Ensures all cards align to the top */
+    align-items: stretch;
 }
 
 .contact-card {
@@ -709,7 +797,6 @@ h2:hover::after {
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 100%; /* Make all cards full height */
     display: flex;
     flex-direction: column;
     justify-content: center;
