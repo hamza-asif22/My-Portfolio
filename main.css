@@ -728,8 +728,10 @@ footer::before {
     min-height: 400px;
     padding: 2rem;
     position: relative;
-    boxorz-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .close-button {
@@ -740,6 +742,10 @@ footer::before {
     color: #1e293b;
     cursor: pointer;
     transition: color 0.3s ease;
+    z-index: 9999;
+    padding: 10px;
+    line-height: 1;
+    touch-action: manipulation;
 }
 
 .close-button:hover {
