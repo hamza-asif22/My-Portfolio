@@ -1,932 +1,1210 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Personal portfolio of Hamza Asif Baig, a Software Engineer showcasing projects, skills, and contact information."
-    />
-    <meta
-      name="keywords"
-      content="portfolio, Hamza Asif Baig, Software Engineer, MERN Stack, Frontend Development, Web Development, App Development"
-    />
-    <meta name="author" content="Hamza Asif Baig" />
-    <title>Hamza Asif Baig | Software Engineer</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  </head>
-  <body>
-    <div class="preloader" role="status" aria-label="Loading">
-      <div class="loader"></div>
-    </div>
 
-    <header>
-      <nav role="navigation">
-        <div class="logo">Hamza Asif Baig</div>
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Personal portfolio of Hamza Asif Baig, a Software Engineer showcasing projects, skills, and contact information." />
+  <meta name="keywords"
+    content="portfolio, Hamza Asif Baig, Software Engineer, MERN Stack, Frontend Development, Web Development, App Development" />
+  <meta name="author" content="Hamza Asif Baig" />
+  <title>Hamza Asif Baig | Software Engineer</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
 
-    <main>
-      <section id="home">
-        <div class="hero">
-          <h1>Hello, I'm Hamza Asif Baig</h1>
-          <p class="subtitle">A Passionate <span class="typed-text"></span></p>
+<body>
+  <!-- Ambient Background Glow & Grid -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+  <div class="glow-blob blob-3"></div>
+  <div class="bg-grid"></div>
+
+  <div class="preloader" role="status" aria-label="Loading">
+    <div class="loader"></div>
+  </div>
+
+  <header>
+    <nav role="navigation">
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>Hamza<span class="logo-accent">.dev</span><span class="logo-bracket"> /&gt;</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="header-cta">Hire Me <i class="fas fa-arrow-right"></i></a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for New Roles & Projects</span>
+          </div>
+          <h1 class="hero-title">
+            Crafting Scalable <span class="gradient-text">Web & Mobile</span> Software Solutions
+          </h1>
+          <p class="subtitle">Hi, I'm <strong class="text-dark">Hamza Asif Baig</strong>. A passionate <span class="typed-text"></span> focused on MERN Stack, Flutter, and AI Engineering.</p>
+          
+          <div class="hero-tags">
+            <span class="hero-tag"><i class="fab fa-react"></i> React & Next.js</span>
+            <span class="hero-tag"><i class="fas fa-mobile-alt"></i> Flutter App Dev</span>
+            <span class="hero-tag"><i class="fab fa-node-js"></i> Node & Express</span>
+            <span class="hero-tag"><i class="fab fa-python"></i> Python & AI/ML</span>
+          </div>
+
           <div class="hero-buttons">
-            <a href="#projects" class="cta-button">Explore My Work</a>
-            <a
-              href="Software Engineer - Hamza Asif.pdf"
-              class="cta-button secondary"
-              download
-              >Download Resume</a
-            >
+            <a href="#projects" class="cta-button primary">
+              <span>View Featured Work</span>
+              <i class="fas fa-arrow-down"></i>
+            </a>
+            <a href="Software Engineer - Hamza Asif.pdf" class="cta-button secondary" download>
+              <span>Download CV</span>
+              <i class="fas fa-file-download"></i>
+            </a>
           </div>
         </div>
-      </section>
 
-      <section id="about">
+        <!-- Terminal / Dev Spotlight Card -->
+        <div class="hero-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">hamza@engineer: ~/portfolio</span>
+          </div>
+          <div class="terminal-body">
+            <div class="code-line"><span class="code-keyword">const</span> <span class="code-variable">engineer</span> = {</div>
+            <div class="code-line indent"><span class="code-property">name</span>: <span class="code-string">'Hamza Asif Baig'</span>,</div>
+            <div class="code-line indent"><span class="code-property">role</span>: <span class="code-string">'Software Engineer'</span>,</div>
+            <div class="code-line indent"><span class="code-property">degree</span>: <span class="code-string">'BS Software Engineering (COMSATS)'</span>,</div>
+            <div class="code-line indent"><span class="code-property">location</span>: <span class="code-string">'Lahore, Pakistan 🇵🇰'</span>,</div>
+            <div class="code-line indent"><span class="code-property">coreStack</span>: [<span class="code-string">'MERN'</span>, <span class="code-string">'Next.js'</span>, <span class="code-string">'Flutter'</span>, <span class="code-string">'Python'</span>, <span class="code-string">'FastAPI'</span>],</div>
+            <div class="code-line indent"><span class="code-property">status</span>: <span class="code-string">'Building high-performance apps'</span></div>
+            <div class="code-line">};</div>
+            <div class="code-line prompt"><span class="code-keyword">await</span> engineer.connect(); <span class="code-cursor">█</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-tag">WHO I AM</span>
         <h2>About Me</h2>
-        <div class="about-content">
-          <img
-            src="media/pic1.JPG"
-            alt="Profile picture of Hamza Asif Baig"
-            class="profile-picture"
-            loading="lazy"
-            width="300"
-            height="300"
-          />
-          <div class="about-text">
-            <p>
-              I am a BS Software Engineering graduate from COMSATS University with
-              a strong interest in full-stack development, problem solving,
-              artificial intelligence, and machine learning. I enjoy building
-              real-world applications that combine clean architecture, structured
-              design patterns, and practical technology solutions.
-            </p>
-
-            <p>
-              I have hands-on experience working with the MERN stack, Flutter,
-              Python, Firebase, MongoDB, and FastAPI. I have developed several
-              impactful academic and personal projects using these technologies,
-              focusing on performance, usability, and scalable system design.
-            </p>
-
-            <p>
-              My work includes the Kokoro Dojo martial arts training app (Final
-              Year Project), a lung disease prediction system using machine
-              learning, a Python-based code smell detection tool, an SEO-optimized
-              AI-integrated e-commerce platform, and a number plate detection
-              system using OpenCV. I am passionate about learning new
-              technologies, writing clean maintainable code, and turning ideas
-              into practical software solutions.
-            </p>
-
-            <a href="#contact" class="cta-button">Get in Touch</a>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="image-frame">
+            <img src="media/pic1.JPG" alt="Profile picture of Hamza Asif Baig" class="profile-picture" loading="lazy" width="300" height="300" />
+          </div>
+          <div class="experience-badge">
+            <span class="badge-num">BS</span>
+            <span class="badge-text">Software Eng. Graduate</span>
           </div>
         </div>
-      </section>
 
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-content">
-          <article class="experience-item">
-            <h3>Flutter Application Development Intern</h3>
-            <p class="experience-location">
-              Punjab Information Technology Board (PITB), Arfa Karim
-            </p>
-            <p class="experience-date">
-              <time datetime="2025-07">July 2025</time> – <time datetime="2025-09">September 2025</time>
-            </p>
-            <ul>
-              <li>
-                Developed and maintained Flutter application using MVC
-                architecture and state management that made my code 70% clean and
-                20% fast.
-              </li>
-              <li>
-                Created responsive, user-friendly mobile interfaces optimized for
-                every Android device using modern UI/UX standards.
-              </li>
-              <li>
-                Implemented Firebase authentication and Firestore database
-                integration so user can stay secure and store data.
-              </li>
-              <li>
-                Collaborated with a professional dev team of 10+ people using
-                industry workflow and understanding them.
-              </li>
+        <div class="about-info">
+          <p class="about-highlight">
+            I am a BS Software Engineering graduate from COMSATS University with a strong passion for full-stack web development, cross-platform mobile apps, and machine learning integration.
+          </p>
+
+          <p>
+            With hands-on experience across the MERN stack, Next.js, Flutter, Firebase, FastAPI, and OpenCV, I specialize in architecting clean, maintainable systems that deliver exceptional user experiences and robust functionality.
+          </p>
+
+          <div class="about-stats-grid">
+            <div class="stat-card">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Years Learning & Building</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">8+</span>
+              <span class="stat-label">Major Projects Built</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">FYP</span>
+              <span class="stat-label">Kokoro Dojo AI App</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="cta-button primary margin-top">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="section-header">
+        <span class="section-tag">CAREER PATH</span>
+        <h2>Work Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Flutter Application Development Intern</h3>
+              <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2025 – Sep 2025</span>
+            </div>
+            <h4 class="company-name"><i class="fas fa-building"></i> Punjab Information Technology Board (PITB), Arfa Karim Tower</h4>
+            <ul class="experience-list">
+              <li>Engineered Flutter mobile applications following MVC architecture and clean state management, producing 70% cleaner codebase and 20% performance boost.</li>
+              <li>Designed responsive and pixel-perfect mobile interfaces optimized for diverse Android screen resolutions.</li>
+              <li>Integrated Firebase Authentication and Firestore real-time cloud database for seamless user authentication and data persistence.</li>
+              <li>Collaborated within a cross-functional engineering team of 10+ developers using Agile workflows.</li>
             </ul>
-          </article>
+            <div class="tech-pills">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Firebase</span>
+              <span>MVC</span>
+              <span>REST APIs</span>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Languages</h3>
-            <p>Dart, Python</p>
-          </article>
-          <article class="skill-card">
-            <h3>Mobile</h3>
-            <p>Flutter, State-Management, MVVM, Rest APIs</p>
-          </article>
-          <article class="skill-card">
-            <h3>Web</h3>
-            <p>React.js, Node.js, Express, MERN, APIs</p>
-          </article>
-          <article class="skill-card">
-            <h3>Database</h3>
-            <p>MongoDB, Firebase, SQL</p>
-          </article>
-          <article class="skill-card">
-            <h3>AI/ML</h3>
-            <p>Computer Vision, Model Training</p>
-          </article>
-          <article class="skill-card">
-            <h3>Tools</h3>
-            <p>GitHub, Postman, Android Studio, VS Code</p>
-          </article>
-        </div>
-      </section>
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-tag">MY TOOLBOX</span>
+        <h2>Skills & Expertise</h2>
+      </div>
 
-      <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-          <article class="project-card" data-project-id="2">
-            <img src="media/Kokoro-Dojo/1.jpg" alt="Kokoro Dojo App" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>Kokoro Dojo App</h3>
-              <p class="italic-text">
-                A Flutter-based martial arts app using AI-powered posture analysis
-                to guide users in training techniques using Computer Vision.
-              </p>
-              <button class="project-link" onclick="openProjectModal(2)" aria-label="View Kokoro Dojo App details">
-                View Project
-              </button>
-            </div>
-          </article>
-          <article class="project-card" data-project-id="6">
-            <img src="media/Tek-Daraz/1.png" alt="Tez-Daraz Ecommerce Website" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>Tez-Daraz Ecommerce Website</h3>
-              <p class="italic-text">
-                A MERN Stack e-commerce website for a local business. Features
-                include product listings, cart functionality, and user
-                authentication.
-              </p>
-              <button class="project-link" onclick="openProjectModal(6)" aria-label="View Tez-Daraz Ecommerce Website details">
-                View Project
-              </button>
-            </div>
-          </article>
-          <article class="project-card" data-project-id="0">
-            <img src="media/book1.png" alt="Books Management System" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>Books Management System</h3>
-              <p class="italic-text">
-                A full-stack application built with the MERN stack to manage and
-                organize books. APIs tested with Postman.
-              </p>
-              <button class="project-link" onclick="openProjectModal(0)" aria-label="View Books Management System details">
-                View Project
-              </button>
-            </div>
-          </article>
-          <article class="project-card" data-project-id="1">
-            <img src="media/codesm1.png" alt="Code Smell Detection Tool" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>Code Smell Detection Tool</h3>
-              <p class="italic-text">
-                Python-based tool that analyzes Python code for code smells. Built
-                with Flask for the web interface.
-              </p>
-              <button class="project-link" onclick="openProjectModal(1)" aria-label="View Code Smell Detection Tool details">
-                View Project
-              </button>
-            </div>
-          </article>
-
-          <article class="project-card" data-project-id="3">
-            <img src="media/asl1.png" alt="American Sign Language Detection" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>American Sign Language Detection</h3>
-              <p class="italic-text">
-                AI model with 90% accuracy to detect hand signs. Built with Python
-                and trained on Google Colab to assist people with disabilities.
-              </p>
-              <button class="project-link" onclick="openProjectModal(3)" aria-label="View American Sign Language Detection details">
-                View Project
-              </button>
-            </div>
-          </article>
-          <article class="project-card" data-project-id="4">
-            <img src="media/num1.png" alt="Number Plate Detection" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>Number Plate Detection</h3>
-              <p class="italic-text">
-                Python and Django-based system to detect car number plates with
-                70% accuracy using image segmentation techniques.
-              </p>
-              <button class="project-link" onclick="openProjectModal(4)" aria-label="View Number Plate Detection details">
-                View Project
-              </button>
-            </div>
-          </article>
-          <article class="project-card" data-project-id="5">
-            <img src="media/box1.png" alt="Boxing Website Frontend" loading="lazy" width="400" height="300" />
-            <div class="project-info">
-              <h3>Boxing Website Frontend</h3>
-              <p class="italic-text">
-                Frontend for a boxing website built using React.js, Tailwind CSS,
-                and Vite for fast performance and clean UI.
-              </p>
-              <button class="project-link" onclick="openProjectModal(5)" aria-label="View Boxing Website Frontend details">
-                View Project
-              </button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <div class="education-content">
-          <article class="education-item">
-            <h3>Bachelor of Science in Software Engineering</h3>
-            <p class="italic-text">
-              COMSATS University Islamabad, Lahore Campus
-            </p>
-            <p class="italic-text">
-              <time datetime="2022-02">February 2022</time> - <time datetime="2026-01">January 2026</time>
-            </p>
-            <p class="italic-text">CGPA: 2.97</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-grid">
-          <article class="contact-card">
-            <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
-            <h3>Email</h3>
-            <a href="mailto:hamzaasifbaig190@gmail.com" aria-label="Email Hamza Asif Baig"
-              >hamzaasifbaig190@gmail.com</a
-            >
-          </article>
-          <article class="contact-card">
-            <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
-            <h3>Mobile</h3>
-            <a href="tel:+923038875757" aria-label="Call Hamza Asif Baig">+92 303 8875757</a>
-          </article>
-          <article class="contact-card">
-            <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i>
-            <h3>LinkedIn</h3>
-            <a
-              href="https://linkedin.com/in/hamza-asif-baig-a23512276"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Hamza Asif Baig's LinkedIn profile"
-              >hamza-asif-baig</a
-            >
-          </article>
-          <article class="contact-card">
-            <i class="fab fa-github contact-icon" aria-hidden="true"></i>
-            <h3>GitHub</h3>
-            <a
-              href="https://github.com/hamza-asif22"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Hamza Asif Baig's GitHub profile"
-              >hamza-asif22</a
-            >
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p class="italic-text">© 2026 Hamza Asif Baig. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Project Modal -->
-    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="modal-content">
-        <button class="close-button" onclick="closeProjectModal()" aria-label="Close modal">×</button>
-        <h2 id="modalTitle"></h2>
-        <div class="modal-media">
-          <video id="modalVideo" controls style="display: none;">
-            <source src="" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
-          <div class="image-slider" id="imageSlider" style="display: none;">
-            <button class="slide-btn prev" onclick="changeSlide(-1)" aria-label="Previous image">❮</button>
-            <div id="modalSliderWrapper" class="slider-wrapper"></div>
-            <button class="slide-btn next" onclick="changeSlide(1)" aria-label="Next image">❯</button>
+      <div class="skills-bento-grid">
+        <div class="skill-bento-card">
+          <div class="card-icon"><i class="fas fa-code"></i></div>
+          <h3>Programming Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Dart</span>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">HTML5 / CSS3</span>
           </div>
         </div>
 
-        <p id="modalDescription" class="italic-text"></p>
-        <h3>Technologies Used</h3>
-        <ul id="modalTechnologies"></ul>
+        <div class="skill-bento-card">
+          <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile App Development</h3>
+          <div class="skill-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">State Management</span>
+            <span class="tag">MVVM / MVC</span>
+            <span class="tag">Mobile UI/UX</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card">
+          <div class="card-icon"><i class="fas fa-globe"></i></div>
+          <h3>Full-Stack Web</h3>
+          <div class="skill-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card">
+          <div class="card-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases & Cloud</h3>
+          <div class="skill-tags">
+            <span class="tag">MongoDB</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Cloudinary</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card">
+          <div class="card-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI & Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Google Colab</span>
+          </div>
+        </div>
+
+        <div class="skill-bento-card">
+          <div class="card-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools & Workflows</h3>
+          <div class="skill-tags">
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">Postman</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Android Studio</span>
+            <span class="tag">SEO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="bento-project-grid">
+        <!-- Kokoro Dojo (FYP) -->
+        <article class="bento-card featured" data-project-id="2" onclick="openProjectModal(2)">
+          <div class="bento-media">
+            <img src="media/Kokoro-Dojo/1.jpg" alt="Kokoro Dojo App" loading="lazy" />
+            <div class="media-overlay"></div>
+            <span class="category-badge">FINAL YEAR PROJECT</span>
+          </div>
+          <div class="bento-content">
+            <div class="bento-title-row">
+              <h3>Kokoro Dojo App</h3>
+            </div>
+            <p>
+              Flutter martial arts AI app with FastAPI backend & Computer Vision posture detection to guide users in stance techniques.
+            </p>
+            <div class="tech-pills">
+              <span>Flutter</span>
+              <span>FastAPI</span>
+              <span>Firebase</span>
+              <span>Computer Vision</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TekDaraz -->
+        <article class="bento-card featured" data-project-id="6" onclick="openProjectModal(6)">
+          <div class="bento-media">
+            <img src="media/Tek-Daraz/1.png" alt="TekDaraz Ecommerce Website" loading="lazy" />
+            <div class="media-overlay"></div>
+            <span class="category-badge live">LIVE SITE</span>
+          </div>
+          <div class="bento-content">
+            <div class="bento-title-row">
+              <h3>TekDaraz E-Commerce</h3>
+            </div>
+            <p>
+              Full-featured MERN Stack e-commerce platform with admin inventory management, seller portal, SEO optimization, and Gemini AI search.
+            </p>
+            <div class="tech-pills">
+              <span>MERN Stack</span>
+              <span>Vercel</span>
+              <span>Cloudinary</span>
+              <span>Gemini API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Wisdom Portal PK -->
+        <article class="bento-card featured" data-project-id="7" onclick="openProjectModal(7)">
+          <div class="bento-media">
+            <img src="media/Wisom-Portal/1.png" alt="Wisdom Portal PK" loading="lazy" />
+            <div class="media-overlay"></div>
+            <span class="category-badge live">LIVE SITE</span>
+          </div>
+          <div class="bento-content">
+            <div class="bento-title-row">
+              <h3>Wisdom Portal PK</h3>
+            </div>
+            <p>
+              Next.js AI-powered educational discovery portal for exploring university degree pathways, admission streams, and merit aggregates.
+            </p>
+            <div class="tech-pills">
+              <span>Next.js</span>
+              <span>Vercel</span>
+              <span>SEO</span>
+              <span>AI Engine</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Books Management System -->
+        <article class="bento-card" data-project-id="0" onclick="openProjectModal(0)">
+          <div class="bento-media">
+            <img src="media/book1.png" alt="Books Management System" loading="lazy" />
+          </div>
+          <div class="bento-content">
+            <h3>Books Management System</h3>
+            <p>Full-stack MERN CRUD application for cataloging books with Postman-verified APIs.</p>
+            <div class="tech-pills">
+              <span>MERN</span>
+              <span>React</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Code Smell Detection Tool -->
+        <article class="bento-card" data-project-id="1" onclick="openProjectModal(1)">
+          <div class="bento-media">
+            <img src="media/codesm1.png" alt="Code Smell Detection Tool" loading="lazy" />
+          </div>
+          <div class="bento-content">
+            <h3>Code Smell Detection Tool</h3>
+            <p>Python static analysis tool paired with Flask web interface to analyze code smells.</p>
+            <div class="tech-pills">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>Static Analysis</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ASL Gesture Detection -->
+        <article class="bento-card" data-project-id="3" onclick="openProjectModal(3)">
+          <div class="bento-media">
+            <img src="media/asl1.png" alt="American Sign Language Detection" loading="lazy" />
+          </div>
+          <div class="bento-content">
+            <h3>ASL Gesture Recognition</h3>
+            <p>AI model achieving 90% accuracy recognizing American Sign Language gestures.</p>
+            <div class="tech-pills">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>OpenCV</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Number Plate Detection -->
+        <article class="bento-card" data-project-id="4" onclick="openProjectModal(4)">
+          <div class="bento-media">
+            <img src="media/num1.png" alt="Number Plate Detection" loading="lazy" />
+          </div>
+          <div class="bento-content">
+            <h3>Number Plate Detection</h3>
+            <p>Django & OpenCV computer vision system for automated license plate segmentation.</p>
+            <div class="tech-pills">
+              <span>Django</span>
+              <span>OpenCV</span>
+              <span>Image Processing</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Boxing Website Frontend -->
+        <article class="bento-card" data-project-id="5" onclick="openProjectModal(5)">
+          <div class="bento-media">
+            <img src="media/box1.png" alt="Boxing Website Frontend" loading="lazy" />
+          </div>
+          <div class="bento-content">
+            <h3>Ring Warriors Boxing</h3>
+            <p>High-performance React.js & Tailwind CSS frontend application built with Vite.</p>
+            <div class="tech-pills">
+              <span>React.js</span>
+              <span>Tailwind CSS</span>
+              <span>Vite</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+      <div class="section-header">
+        <span class="section-tag">ACADEMIC BACKGROUND</span>
+        <h2>Education</h2>
+      </div>
+
+      <div class="education-card-wrapper">
+        <div class="education-glass-card">
+          <div class="edu-header">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h3>Bachelor of Science in Software Engineering</h3>
+              <p class="institution">COMSATS University Islamabad, Lahore Campus</p>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-pill"><i class="far fa-calendar-alt"></i> Feb 2022 – Jan 2026</span>
+            <span class="edu-pill cgpa"><i class="fas fa-star"></i> CGPA: 2.97</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-tag">LET'S CONNECT</span>
+        <h2>Contact Me</h2>
+      </div>
+
+      <div class="contact-cards-grid">
+        <a href="mailto:hamzaasifbaig190@gmail.com" class="contact-box">
+          <div class="contact-box-icon"><i class="fas fa-envelope"></i></div>
+          <h3>Email Me</h3>
+          <p>hamzaasifbaig190@gmail.com</p>
+          <span class="contact-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="tel:+923038875757" class="contact-box">
+          <div class="contact-box-icon"><i class="fas fa-phone"></i></div>
+          <h3>Call Me</h3>
+          <p>+92 303 8875757</p>
+          <span class="contact-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="https://linkedin.com/in/hamza-asif-baig-a23512276" target="_blank" rel="noopener noreferrer" class="contact-box">
+          <div class="contact-box-icon"><i class="fab fa-linkedin"></i></div>
+          <h3>LinkedIn</h3>
+          <p>hamza-asif-baig</p>
+          <span class="contact-arrow"><i class="fas fa-external-link-alt"></i></span>
+        </a>
+
+        <a href="https://github.com/hamza-asif22" target="_blank" rel="noopener noreferrer" class="contact-box">
+          <div class="contact-box-icon"><i class="fab fa-github"></i></div>
+          <h3>GitHub</h3>
+          <p>hamza-asif22</p>
+          <span class="contact-arrow"><i class="fas fa-external-link-alt"></i></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Hamza Asif Baig. Designed & Built with Precision.</p>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="close-button" onclick="closeProjectModal()" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="modal-header-container">
+        <span class="modal-badge"><i class="fas fa-layer-group"></i> PROJECT SHOWCASE</span>
+        <h2 id="modalTitle"></h2>
+      </div>
+
+      <div class="modal-media">
+        <video id="modalVideo" controls style="display: none;">
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="image-slider" id="imageSlider" style="display: none;">
+          <button class="slide-btn prev" onclick="changeSlide(-1)" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+          <div id="modalSliderWrapper" class="slider-wrapper"></div>
+          <button class="slide-btn next" onclick="changeSlide(1)" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+          <div id="slideCounter" class="slide-counter-badge">1 / 1</div>
+        </div>
+      </div>
+
+      <div class="modal-body-section">
+        <div id="modalDescription" class="modal-description-text"></div>
+
+        <div id="modalLiveUrlContainer" style="display: none;">
+          <a id="modalLiveUrl" href="" target="_blank" rel="noopener noreferrer" class="modal-live-btn">
+            <span>Visit Live Website</span> <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="modal-tech-box">
+          <h3><i class="fas fa-code"></i> Technologies & Tools</h3>
+          <ul id="modalTechnologies" class="modal-tech-list"></ul>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Fullscreen Image Viewer for Mobile -->
-    <div class="fullscreen-viewer" id="fullscreenViewer">
-      <button class="fullscreen-close" id="fullscreenClose" aria-label="Close fullscreen view">×</button>
-      <img id="fullscreenImage" src="" alt="Fullscreen view">
-    </div>
+  <!-- Fullscreen Image Viewer for Mobile -->
+  <div class="fullscreen-viewer" id="fullscreenViewer">
+    <button class="fullscreen-close" id="fullscreenClose" aria-label="Close fullscreen view">×</button>
+    <img id="fullscreenImage" src="" alt="Fullscreen view">
+  </div>
 
-    <script>
-      // Project data
-      const projects = [
-        {
-          title: "Books Management System",
-          description:
-            "A full-stack MERN application developed using Visual Studio Code to manage books with basic CRUD operations. Postman was used to verify API endpoints, ensuring robust backend functionality.",
-          technologies: [
-            "MongoDB",
-            "Express.js",
-            "React.js",
-            "Node.js",
-            "Postman",
-          ],
-          video: "media/Book-Management.mp4",
-        },
-        {
-          title: "Code Smell Detection Tool",
-          description:
-            "A tool developed in Python to detect code smells in Python files or entire projects. The frontend was rendered using Flask, providing users with a simple interface for code upload and analysis.",
-          technologies: ["Python", "Flask", "HTML", "CSS"],
-          video: "media/Code-Smell-Detection.mp4",
-        },
-        {
-          title: "Kokoro Dojo App",
-          description:
-            "Kokoro Dojo is an Android martial arts training application developed as my Final Year Project, designed to harmonize traditional discipline with modern technology. Built using Flutter for a seamless mobile experience and powered by a FastAPI backend, the platform integrates AI models to provide technical insights and feedback on user stances. The application features a robust architecture utilizing Firebase for real-time data management and authentication, enabling users to track their progress, master specific techniques like Kiba-dachi, and manage their training journey within the app. It also include the AI assistant (Chat-Bot) for the help of the user related to taekwondo and karate. Video lectures help user to watch and learn and motivate them to practice martial arts. This project demonstrates my ability to bridge the gap between complex backend AI services and intuitive, high-performance mobile interfaces.",
-          technologies: [
-            "Flutter",
-            "Firebase",
-            "Google Colab",
-            "Firebase Authentication",
-            "Gemini",
-            "Computer Vision",
-            "Python",
-            "Machine Learning",
-          ],
-          images: [
-                "media/Kokoro-Dojo/1.jpg",
-                "media/Kokoro-Dojo/2.jpg",
-                "media/Kokoro-Dojo/3.jpg",
-                "media/Kokoro-Dojo/4.jpg",
-                "media/Kokoro-Dojo/5.jpg",
-                "media/Kokoro-Dojo/6.jpg",
-                "media/Kokoro-Dojo/7.jpg",
-                "media/Kokoro-Dojo/8.jpg",
-                "media/Kokoro-Dojo/9.jpg",
-                "media/Kokoro-Dojo/10.jpg",
-                "media/Kokoro-Dojo/11.jpg",
-                "media/Kokoro-Dojo/12.jpg",
-                "media/Kokoro-Dojo/13.jpg",
-                "media/Kokoro-Dojo/14.jpg",
-                "media/Kokoro-Dojo/15.jpg",
-                "media/Kokoro-Dojo/16.jpg",
-                "media/Kokoro-Dojo/17.jpg",
-                "media/Kokoro-Dojo/18.jpg",
-                "media/Kokoro-Dojo/19.jpg",
+  <script>
+    // Project data
+    const projects = [
+      {
+        title: "Books Management System",
+        description:
+          "A full-stack MERN application developed using Visual Studio Code to manage books with basic CRUD operations. Postman was used to verify API endpoints, ensuring robust backend functionality.",
+        technologies: [
+          "MongoDB",
+          "Express.js",
+          "React.js",
+          "Node.js",
+          "Postman",
+        ],
+        video: "media/Book-Management.mp4",
+      },
+      {
+        title: "Code Smell Detection Tool",
+        description:
+          "A tool developed in Python to detect code smells in Python files or entire projects. The frontend was rendered using Flask, providing users with a simple interface for code upload and analysis.",
+        technologies: ["Python", "Flask", "HTML", "CSS"],
+        video: "media/Code-Smell-Detection.mp4",
+      },
+      {
+        title: "Kokoro Dojo App",
+        description:
+          "Kokoro Dojo is an Android martial arts training application developed as my Final Year Project, designed to harmonize traditional discipline with modern technology. Built using Flutter for a seamless mobile experience and powered by a FastAPI backend, the platform integrates AI models to provide technical insights and feedback on user stances. The application features a robust architecture utilizing Firebase for real-time data management and authentication, enabling users to track their progress, master specific techniques like Kiba-dachi, and manage their training journey within the app. It also include the AI assistant (Chat-Bot) for the help of the user related to taekwondo and karate. Video lectures help user to watch and learn and motivate them to practice martial arts. This project demonstrates my ability to bridge the gap between complex backend AI services and intuitive, high-performance mobile interfaces.",
+        technologies: [
+          "Flutter",
+          "Firebase",
+          "Google Colab",
+          "Firebase Authentication",
+          "Gemini",
+          "Computer Vision",
+          "Python",
+          "Machine Learning",
+        ],
+        images: [
+          "media/Kokoro-Dojo/1.jpg",
+          "media/Kokoro-Dojo/2.jpg",
+          "media/Kokoro-Dojo/3.jpg",
+          "media/Kokoro-Dojo/4.jpg",
+          "media/Kokoro-Dojo/5.jpg",
+          "media/Kokoro-Dojo/6.jpg",
+          "media/Kokoro-Dojo/7.jpg",
+          "media/Kokoro-Dojo/8.jpg",
+          "media/Kokoro-Dojo/9.jpg",
+          "media/Kokoro-Dojo/10.jpg",
+          "media/Kokoro-Dojo/11.jpg",
+          "media/Kokoro-Dojo/12.jpg",
+          "media/Kokoro-Dojo/13.jpg",
+          "media/Kokoro-Dojo/14.jpg",
+          "media/Kokoro-Dojo/15.jpg",
+          "media/Kokoro-Dojo/16.jpg",
+          "media/Kokoro-Dojo/17.jpg",
+          "media/Kokoro-Dojo/18.jpg",
+          "media/Kokoro-Dojo/19.jpg",
 
-          ],
-        },
-        {
-          title: "American Sign Language Detection",
-          description:
-            "An AI-powered Python application with 90% accuracy in recognizing American Sign Language (ASL) gestures. The model was trained using Google Colab to assist individuals with speech or hearing disabilities.",
-          technologies: ["Python", "Machine Learning", "Google Colab"],
-          image: "media/asl1.png",
-        },
-        {
-          title: "Number Plate Detection",
-          description:
-            "Developed with Python and Django, this system performs image segmentation to detect car number plates with approximately 70% accuracy. A web interface was created for image uploads and result display.",
-          technologies: [
-            "Python",
-            "Django",
-            "OpenCV",
-            "Image Processing",
-          ],
-          video: "media/Detect-Number-Plate.mp4",
-        },
-        {
-          title: "Boxing Website Frontend",
-          description:
-            "A React.js-based boxing website frontend designed using Tailwind CSS and Vite in Visual Studio Code. The focus was on delivering a responsive and clean user interface.",
-          technologies: ["React.js", "Tailwind CSS", "Vite", "JavaScript"],
-          video: "media/Ring-Warriors.mp4",
-        },
-        {
-          title: "Tez-Daraz Ecommerce Website",
-          description:
-            "A MERN Stack e-commerce website designed with a responsive and clean user interface. Provides users with a seamless shopping experience including product listings, cart functionality, and user authentication. Also includes product tracking and order management features. The admin panel allows easy management of products and orders. Sellers can add, update, and remove products, view orders, and manage inventory efficiently. Proper SEO optimization techniques have been implemented to enhance online visibility and search engine rankings. URL slugs are used for better structure.",
-          technologies: [
-            "React.js",
-            "Node.js",
-            "MongoDB",
-            "Gemini-API",
-            "Postman",
-            "SEO Optimization",
-          ],
-          images: [
-            "media/Tek-Daraz/1.png",
-            "media/Tek-Daraz/2.png",
-            "media/Tek-Daraz/3.png",
-            "media/Tek-Daraz/4.png",
-            "media/Tek-Daraz/5.png",
-            "media/Tek-Daraz/6.png",
-            "media/Tek-Daraz/7.png",
-            "media/Tek-Daraz/8.png",
-            "media/Tek-Daraz/9.png",
-            "media/Tek-Daraz/10.png",
-            "media/Tek-Daraz/11.png",
-            "media/Tek-Daraz/12.png",
-            "media/Tek-Daraz/13.png",
-            "media/Tek-Daraz/14.png",
-            "media/Tek-Daraz/15.png",
-            "media/Tek-Daraz/16.png",
-            "media/Tek-Daraz/17.png",
-            "media/Tek-Daraz/18.png",
-          ],
-        },
-      ];
+        ],
+      },
+      {
+        title: "American Sign Language Detection",
+        description:
+          "An AI-powered Python application with 90% accuracy in recognizing American Sign Language (ASL) gestures. The model was trained using Google Colab to assist individuals with speech or hearing disabilities.",
+        technologies: ["Python", "Machine Learning", "Google Colab"],
+        image: "media/asl1.png",
+      },
+      {
+        title: "Number Plate Detection",
+        description:
+          "Developed with Python and Django, this system performs image segmentation to detect car number plates with approximately 70% accuracy. A web interface was created for image uploads and result display.",
+        technologies: [
+          "Python",
+          "Django",
+          "OpenCV",
+          "Image Processing",
+        ],
+        video: "media/Detect-Number-Plate.mp4",
+      },
+      {
+        title: "Boxing Website Frontend",
+        description:
+          "A React.js-based boxing website frontend designed using Tailwind CSS and Vite in Visual Studio Code. The focus was on delivering a responsive and clean user interface.",
+        technologies: ["React.js", "Tailwind CSS", "Vite", "JavaScript"],
+        video: "media/Ring-Warriors.mp4",
+      },
+      {
+        title: "TekDaraz Ecommerce Website",
+        description:
+          "A MERN Stack e-commerce website designed with a responsive and clean user interface. Provides users with a seamless shopping experience including product listings, cart functionality, and user authentication. Also includes product tracking and order management features. The admin panel allows easy management of products and orders. Sellers can add, update, and remove products, view orders, and manage inventory efficiently. Proper SEO optimization techniques have been implemented to enhance online visibility and search engine rankings. URL slugs are used for better structure.",
+        technologies: [
+          "React.js",
+          "Node.js",
+          "MongoDB",
+          "Vercel",
+          "Cloudinary",
+          "Gemini-API",
+          "Postman",
+          "SEO Optimization",
+        ],
+        liveUrl: "https://www.tekdaraz.shop/",
+        images: [
+          "media/Tek-Daraz/1.png",
+          "media/Tek-Daraz/2.png",
+          "media/Tek-Daraz/3.png",
+          "media/Tek-Daraz/4.png",
+          "media/Tek-Daraz/5.png",
+          "media/Tek-Daraz/6.png",
+          "media/Tek-Daraz/7.png",
+          "media/Tek-Daraz/8.png",
+          "media/Tek-Daraz/9.png",
+          "media/Tek-Daraz/10.png",
+          "media/Tek-Daraz/11.png",
+          "media/Tek-Daraz/12.png",
+          "media/Tek-Daraz/13.png",
+          "media/Tek-Daraz/14.png",
+          "media/Tek-Daraz/15.png",
+          "media/Tek-Daraz/16.png",
+          "media/Tek-Daraz/17.png",
+          "media/Tek-Daraz/18.png",
+        ],
+      },
+      {
+        title: "Wisdom Portal PK",
+        description:
+          "Wisdom Portal PK is an AI-powered educational discovery platform built with Next.js and deployed on Vercel. Fully SEO optimized, it helps students navigate higher education choices in Pakistan by exploring degree pathways, university admission streams, aggregate requirements, and an interactive matching engine with merit calculator.",
+        technologies: [
+          "Next.js",
+          "Vercel",
+          "SEO Optimization",
+          "Node.js",
+          "AI Integration",
+          "Tailwind CSS",
+          "RESTful API",
+        ],
+        liveUrl: "https://wisdomportalpk.website/",
+        images: [
+          "media/Wisom-Portal/1.png",
+          "media/Wisom-Portal/2.png",
+          "media/Wisom-Portal/3.png",
+          "media/Wisom-Portal/4.png",
+          "media/Wisom-Portal/5.png",
+          "media/Wisom-Portal/6.png",
+          "media/Wisom-Portal/7.png",
+          "media/Wisom-Portal/8.png",
+          "media/Wisom-Portal/9.png",
+          "media/Wisom-Portal/10.png",
+          "media/Wisom-Portal/11.png",
+          "media/Wisom-Portal/12.png",
+          "media/Wisom-Portal/13.png",
+        ],
+      },
+    ];
 
-      let currentSlide = 0;
-      let currentProjectImages = [];
+    let currentSlide = 0;
+    let currentProjectImages = [];
 
-      // Fullscreen Image Viewer Functions
-      function openFullscreenImage(imageSrc, imageAlt) {
-        const fullscreenViewer = document.getElementById('fullscreenViewer');
-        const fullscreenImage = document.getElementById('fullscreenImage');
-        
-        fullscreenImage.src = imageSrc;
-        fullscreenImage.alt = imageAlt || 'Fullscreen image';
-        
-        fullscreenViewer.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
+    // Fullscreen Image Viewer Functions
+    function openFullscreenImage(imageSrc, imageAlt) {
+      const fullscreenViewer = document.getElementById('fullscreenViewer');
+      const fullscreenImage = document.getElementById('fullscreenImage');
 
-      function closeFullscreenImage() {
-        const fullscreenViewer = document.getElementById('fullscreenViewer');
-        fullscreenViewer.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
+      fullscreenImage.src = imageSrc;
+      fullscreenImage.alt = imageAlt || 'Fullscreen image';
 
-      // Touch swipe support for fullscreen viewer
-      let touchStartX = 0;
-      let touchStartY = 0;
-      let touchEndX = 0;
-      let touchEndY = 0;
+      fullscreenViewer.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
 
-      function handleTouchStart(e) {
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
-      }
+    function closeFullscreenImage() {
+      const fullscreenViewer = document.getElementById('fullscreenViewer');
+      fullscreenViewer.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
 
-      function handleTouchEnd(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        touchEndY = e.changedTouches[0].screenY;
-        handleSwipe();
-      }
+    // Touch swipe support for fullscreen viewer
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
 
-      function handleSwipe() {
-        const swipeThreshold = 50;
-        const diffX = touchEndX - touchStartX;
-        const diffY = touchEndY - touchStartY;
+    function handleTouchStart(e) {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }
 
-        // Check if vertical swipe is more significant than horizontal
-        if (Math.abs(diffY) > Math.abs(diffX)) {
-          // Swipe down to close
-          if (diffY > swipeThreshold) {
-            closeFullscreenImage();
-          }
+    function handleTouchEnd(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+    }
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      // Check if vertical swipe is more significant than horizontal
+      if (Math.abs(diffY) > Math.abs(diffX)) {
+        // Swipe down to close
+        if (diffY > swipeThreshold) {
+          closeFullscreenImage();
         }
       }
+    }
 
-      // Slider functionality
-      function changeSlide(direction) {
-        if (currentProjectImages.length === 0) return;
-        
-        currentSlide = (currentSlide + direction + currentProjectImages.length) % currentProjectImages.length;
-        updateSliderDisplay();
+    // Touch swipe support for Modal Image Slider
+    let sliderTouchStartX = 0;
+    let sliderTouchStartY = 0;
+    let sliderTouchEndX = 0;
+    let sliderTouchEndY = 0;
+
+    function handleSliderTouchStart(e) {
+      sliderTouchStartX = e.changedTouches[0].screenX;
+      sliderTouchStartY = e.changedTouches[0].screenY;
+    }
+
+    function handleSliderTouchEnd(e) {
+      sliderTouchEndX = e.changedTouches[0].screenX;
+      sliderTouchEndY = e.changedTouches[0].screenY;
+      handleSliderSwipe();
+    }
+
+    function handleSliderSwipe() {
+      const minSwipeDistance = 40;
+      const diffX = sliderTouchEndX - sliderTouchStartX;
+      const diffY = sliderTouchEndY - sliderTouchStartY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
+        if (diffX < 0) {
+          changeSlide(1); // Swipe left -> Next image
+        } else {
+          changeSlide(-1); // Swipe right -> Previous image
+        }
       }
+    }
 
-      function updateSliderDisplay() {
-        const slides = document.querySelectorAll('.slider-wrapper .slide');
-        slides.forEach((slide, index) => {
-          slide.style.display = index === currentSlide ? 'block' : 'none';
-        });
+    // Slider functionality
+    function changeSlide(direction) {
+      if (currentProjectImages.length === 0) return;
+
+      currentSlide = (currentSlide + direction + currentProjectImages.length) % currentProjectImages.length;
+      updateSliderDisplay();
+    }
+
+    function updateSliderDisplay() {
+      const slides = document.querySelectorAll('.slider-wrapper .slide');
+      slides.forEach((slide, index) => {
+        slide.style.display = index === currentSlide ? 'block' : 'none';
+      });
+      const counter = document.getElementById('slideCounter');
+      if (counter && currentProjectImages.length > 0) {
+        counter.textContent = `${currentSlide + 1} / ${currentProjectImages.length}`;
+        counter.style.display = currentProjectImages.length > 1 ? 'inline-block' : 'none';
       }
+    }
 
-      // Open modal
-      function openProjectModal(projectId) {
-        try {
-          const project = projects[projectId];
-          if (!project) {
-            console.error(`Project with ID ${projectId} not found`);
-            alert("Project not found. Please try another project.");
-            return;
+    // Open modal
+    function openProjectModal(projectId) {
+      try {
+        const project = projects[projectId];
+        if (!project) {
+          console.error(`Project with ID ${projectId} not found`);
+          alert("Project not found. Please try another project.");
+          return;
+        }
+
+        // Get modal elements
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+        const modalVideo = document.getElementById("modalVideo");
+        const modalSlider = document.getElementById("imageSlider");
+        const modalSliderWrapper = document.getElementById("modalSliderWrapper");
+        const modalTechnologies = document.getElementById("modalTechnologies");
+        const modalLiveUrlContainer = document.getElementById("modalLiveUrlContainer");
+        const modalLiveUrl = document.getElementById("modalLiveUrl");
+        const projectModal = document.getElementById("projectModal");
+
+        // Reset modal content
+        modalTitle.textContent = project.title;
+        modalDescription.innerHTML = project.description
+          .split("\n")
+          .map((p) => `<p>${p.trim()}</p>`)
+          .join("");
+        modalTechnologies.innerHTML = project.technologies
+          .map((tech) => `<li>${tech}</li>`)
+          .join("");
+
+        if (modalLiveUrlContainer && modalLiveUrl) {
+          if (project.liveUrl) {
+            modalLiveUrl.href = project.liveUrl;
+            modalLiveUrlContainer.style.display = 'block';
+          } else {
+            modalLiveUrlContainer.style.display = 'none';
           }
+        }
 
-          // Get modal elements
-          const modalTitle = document.getElementById("modalTitle");
-          const modalDescription = document.getElementById("modalDescription");
-          const modalVideo = document.getElementById("modalVideo");
-          const modalSlider = document.getElementById("imageSlider");
-          const modalSliderWrapper = document.getElementById("modalSliderWrapper");
-          const modalTechnologies = document.getElementById("modalTechnologies");
-          const projectModal = document.getElementById("projectModal");
+        // Reset media displays
+        modalVideo.style.display = 'none';
+        modalSlider.style.display = 'none';
+        modalSliderWrapper.innerHTML = '';
+        currentProjectImages = [];
+        currentSlide = 0;
 
-          // Reset modal content
-          modalTitle.textContent = project.title;
-          modalDescription.innerHTML = project.description
-            .split("\n")
-            .map((p) => `<p>${p.trim()}</p>`)
-            .join("");
-          modalTechnologies.innerHTML = project.technologies
-            .map((tech) => `<li>${tech}</li>`)
-            .join("");
-
-          // Reset media displays
-          modalVideo.style.display = 'none';
-          modalSlider.style.display = 'none';
-          modalSliderWrapper.innerHTML = '';
-          currentProjectImages = [];
-          currentSlide = 0;
-
-          // Handle video or images
-          if (project.video) {
-            const videoSource = modalVideo.querySelector('source');
-            videoSource.src = project.video;
-            modalVideo.load();
-            modalVideo.style.display = 'block';
-          } else if (project.images && project.images.length > 0) {
-            currentProjectImages = project.images;
-            project.images.forEach((img, index) => {
-              const slide = document.createElement('div');
-              slide.classList.add('slide');
-              
-              const image = document.createElement('img');
-              image.src = img;
-              image.alt = `${project.title} - Image ${index + 1}`;
-              image.loading = 'lazy';
-              
-              // Add click event for fullscreen on mobile
-              if (window.innerWidth <= 768) {
-                image.addEventListener('click', function() {
-                  openFullscreenImage(this.src, this.alt);
-                });
-              }
-
-              slide.appendChild(image);
-              modalSliderWrapper.appendChild(slide);
-            });
-            
-            // Add class to hide buttons if only one image
-            if (project.images.length === 1) {
-              modalSlider.classList.add('single-image');
-            } else {
-              modalSlider.classList.remove('single-image');
-            }
-            
-            updateSliderDisplay();
-            modalSlider.style.display = 'block';
-          } else if (project.image) {
-            currentProjectImages = [project.image];
+        // Handle video or images
+        if (project.video) {
+          const videoSource = modalVideo.querySelector('source');
+          videoSource.src = project.video;
+          modalVideo.load();
+          modalVideo.style.display = 'block';
+        } else if (project.images && project.images.length > 0) {
+          currentProjectImages = project.images;
+          project.images.forEach((img, index) => {
             const slide = document.createElement('div');
             slide.classList.add('slide');
 
             const image = document.createElement('img');
-            image.src = project.image;
-            image.alt = project.title;
+            image.src = img;
+            image.alt = `${project.title} - Image ${index + 1}`;
             image.loading = 'lazy';
-            
+
             // Add click event for fullscreen on mobile
             if (window.innerWidth <= 768) {
-              image.addEventListener('click', function() {
+              image.addEventListener('click', function () {
                 openFullscreenImage(this.src, this.alt);
               });
             }
 
             slide.appendChild(image);
             modalSliderWrapper.appendChild(slide);
-            
-            // Hide slider buttons for single image
+          });
+
+          // Add class to hide buttons if only one image
+          if (project.images.length === 1) {
             modalSlider.classList.add('single-image');
-            modalSlider.style.display = 'block';
-          }
-
-          // Show modal
-          projectModal.style.display = "flex";
-          projectModal.style.visibility = "visible";
-          projectModal.style.opacity = "1";
-          projectModal.classList.add("active");
-
-          // GSAP animation with fallback
-          if (typeof gsap !== "undefined") {
-            gsap.fromTo(
-              ".modal-content",
-              { opacity: 0, y: 50 },
-              {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: "power3.out",
-              }
-            );
           } else {
-            document.querySelector(".modal-content").style.opacity = "1";
-            document.querySelector(".modal-content").style.transform = "none";
+            modalSlider.classList.remove('single-image');
           }
 
-          document.body.style.overflow = "hidden";
-        } catch (error) {
-          console.error("Error opening modal:", error);
-          alert("Failed to open project details. Please try again.");
+          updateSliderDisplay();
+          modalSlider.style.display = 'block';
+        } else if (project.image) {
+          currentProjectImages = [project.image];
+          const slide = document.createElement('div');
+          slide.classList.add('slide');
+
+          const image = document.createElement('img');
+          image.src = project.image;
+          image.alt = project.title;
+          image.loading = 'lazy';
+
+          // Add click event for fullscreen on mobile
+          if (window.innerWidth <= 768) {
+            image.addEventListener('click', function () {
+              openFullscreenImage(this.src, this.alt);
+            });
+          }
+
+          slide.appendChild(image);
+          modalSliderWrapper.appendChild(slide);
+
+          // Hide slider buttons for single image
+          modalSlider.classList.add('single-image');
+          modalSlider.style.display = 'block';
         }
+
+        // Show modal
+        projectModal.style.display = "flex";
+        projectModal.style.visibility = "visible";
+        projectModal.style.opacity = "1";
+        projectModal.classList.add("active");
+
+        // GSAP animation with fallback
+        if (typeof gsap !== "undefined") {
+          gsap.fromTo(
+            ".modal-content",
+            { opacity: 0, y: 50 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.5,
+              ease: "power3.out",
+            }
+          );
+        } else {
+          document.querySelector(".modal-content").style.opacity = "1";
+          document.querySelector(".modal-content").style.transform = "none";
+        }
+
+        document.body.style.overflow = "hidden";
+      } catch (error) {
+        console.error("Error opening modal:", error);
+        alert("Failed to open project details. Please try again.");
+      }
+    }
+
+    // Close modal
+    function closeProjectModal() {
+      const projectModal = document.getElementById("projectModal");
+      const modalVideo = document.getElementById("modalVideo");
+
+      if (typeof gsap !== "undefined") {
+        gsap.to(".modal-content", {
+          opacity: 0,
+          y: 50,
+          duration: 0.3,
+          ease: "power3.in",
+          onComplete: () => {
+            resetModal();
+          },
+        });
+      } else {
+        resetModal();
       }
 
-      // Close modal
-      function closeProjectModal() {
-        const projectModal = document.getElementById("projectModal");
-        const modalVideo = document.getElementById("modalVideo");
+      function resetModal() {
+        projectModal.style.display = "none";
+        projectModal.style.visibility = "hidden";
+        projectModal.classList.remove("active");
+        modalVideo.pause();
+        modalVideo.querySelector("source").src = "";
+        document.getElementById("modalSliderWrapper").innerHTML = "";
+        currentProjectImages = [];
+        currentSlide = 0;
+        document.body.style.overflow = "auto";
+      }
+    }
 
-        if (typeof gsap !== "undefined") {
-          gsap.to(".modal-content", {
-            opacity: 0,
-            y: 50,
-            duration: 0.3,
-            ease: "power3.in",
+    // Preloader
+    function hidePreloader() {
+      const preloader = document.querySelector(".preloader");
+      if (preloader) {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 500);
+      }
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function () {
+      // Hide preloader
+      window.addEventListener("load", hidePreloader);
+      setTimeout(hidePreloader, 2000); // Safety fallback
+
+      // Hamburger menu toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+          const isExpanded = navLinks.classList.toggle("active");
+          hamburger.classList.toggle("open");
+          hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+      }
+
+      // Smooth scrolling for nav links
+      document.querySelectorAll('.nav-link, .cta-button[href*="#"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+          const href = link.getAttribute("href");
+          if (!href || !href.includes("#")) return;
+
+          e.preventDefault();
+          const targetId = href.substring(href.indexOf("#") + 1);
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 70,
+              behavior: "smooth",
+            });
+
+            if (typeof gsap !== "undefined") {
+              gsap.to(link, {
+                scale: 0.9,
+                duration: 0.2,
+                ease: "power1.inOut",
+                onComplete: () => {
+                  gsap.to(link, { scale: 1, duration: 0.2 });
+                },
+              });
+            }
+
+            if (navLinks.classList.contains("active")) {
+              navLinks.classList.remove("active");
+              hamburger.classList.remove("open");
+              hamburger.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      });
+
+      // Typed.js with fallback
+      try {
+        if (typeof Typed !== 'undefined') {
+          const typed = new Typed(".typed-text", {
+            strings: ["Software Engineer"],
+            typeSpeed: 60,
+            backSpeed: 0,
+            backDelay: 0,
+            loop: false,
+            showCursor: true,
             onComplete: () => {
-              resetModal();
+              const cursor = document.querySelector(".typed-cursor");
+              if (cursor) cursor.style.display = "none";
             },
           });
         } else {
-          resetModal();
+          throw new Error("Typed.js not loaded");
         }
-
-        function resetModal() {
-          projectModal.style.display = "none";
-          projectModal.style.visibility = "hidden";
-          projectModal.classList.remove("active");
-          modalVideo.pause();
-          modalVideo.querySelector("source").src = "";
-          document.getElementById("modalSliderWrapper").innerHTML = "";
-          currentProjectImages = [];
-          currentSlide = 0;
-          document.body.style.overflow = "auto";
-        }
+      } catch (e) {
+        console.error("Typed.js failed to load:", e);
+        const typedElement = document.querySelector(".typed-text");
+        if (typedElement) typedElement.textContent = "Software Engineer";
       }
 
-      // Preloader
-      function hidePreloader() {
-        const preloader = document.querySelector(".preloader");
-        if (preloader) {
-          preloader.style.opacity = "0";
-          setTimeout(() => {
-            preloader.style.display = "none";
-          }, 500);
-        }
-      }
+      // GSAP Animations with fallback
+      if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
 
-      // Initialize when DOM is ready
-      document.addEventListener('DOMContentLoaded', function() {
-        // Hide preloader
-        window.addEventListener("load", hidePreloader);
-        setTimeout(hidePreloader, 2000); // Safety fallback
+        const safeGsapFrom = (selector, config) => {
+          const elems = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
+          if (elems && (elems.length > 0 || elems.nodeType)) {
+            gsap.from(elems, config);
+          }
+        };
 
-        // Hamburger menu toggle
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        if (hamburger && navLinks) {
-          hamburger.addEventListener("click", () => {
-            const isExpanded = navLinks.classList.toggle("active");
-            hamburger.classList.toggle("open");
-            hamburger.setAttribute('aria-expanded', isExpanded);
-          });
-        }
-
-        // Smooth scrolling for nav links
-        document.querySelectorAll('.nav-link, .cta-button[href*="#"]').forEach((link) => {
-          link.addEventListener("click", (e) => {
-            const href = link.getAttribute("href");
-            if (!href || !href.includes("#")) return;
-            
-            e.preventDefault();
-            const targetId = href.substring(href.indexOf("#") + 1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-              window.scrollTo({
-                top: targetSection.offsetTop - 70,
-                behavior: "smooth",
-              });
-
-              if (typeof gsap !== "undefined") {
-                gsap.to(link, {
-                  scale: 0.9,
-                  duration: 0.2,
-                  ease: "power1.inOut",
-                  onComplete: () => {
-                    gsap.to(link, { scale: 1, duration: 0.2 });
-                  },
-                });
-              }
-
-              if (navLinks.classList.contains("active")) {
-                navLinks.classList.remove("active");
-                hamburger.classList.remove("open");
-                hamburger.setAttribute('aria-expanded', 'false');
-              }
-            }
-          });
+        safeGsapFrom(".hero-title", {
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          ease: "power3.out",
+        });
+        safeGsapFrom(".subtitle, .hero-tags", {
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          delay: 0.2,
+          ease: "power3.out",
+        });
+        safeGsapFrom(".hero-buttons", {
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          delay: 0.4,
+          ease: "power3.out",
+        });
+        safeGsapFrom(".hero-terminal", {
+          opacity: 0,
+          scale: 0.95,
+          duration: 1.2,
+          delay: 0.5,
+          ease: "power3.out",
         });
 
-        // Typed.js with fallback
-        try {
-          if (typeof Typed !== 'undefined') {
-            const typed = new Typed(".typed-text", {
-              strings: ["Software Engineer"],
-              typeSpeed: 60,
-              backSpeed: 0,
-              backDelay: 0,
-              loop: false,
-              showCursor: true,
-              onComplete: () => {
-                const cursor = document.querySelector(".typed-cursor");
-                if (cursor) cursor.style.display = "none";
-              },
-            });
-          } else {
-            throw new Error("Typed.js not loaded");
-          }
-        } catch (e) {
-          console.error("Typed.js failed to load:", e);
-          const typedElement = document.querySelector(".typed-text");
-          if (typedElement) typedElement.textContent = "Software Engineer";
-        }
-
-        // GSAP Animations with fallback
-        if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-          gsap.registerPlugin(ScrollTrigger);
-
-          gsap.from(".hero h1", {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "power3.out",
-          });
-          gsap.from(".hero .subtitle", {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            delay: 0.3,
-            ease: "power3.out",
-          });
-          gsap.from(".hero-buttons", {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            delay: 0.6,
-            ease: "power3.out",
-          });
-
-          gsap.utils.toArray("section").forEach((section) => {
-            gsap.from(
-              section.querySelectorAll(
-                "h2, .skill-card, .project-card, .education-item, .contact-form, .contact-grid"
-              ),
+        gsap.utils.toArray("section").forEach((section) => {
+          const targets = section.querySelectorAll(
+            "h2, .section-tag, .skill-bento-card, .bento-card, .timeline-content, .education-glass-card, .contact-box"
+          );
+          if (targets && targets.length > 0) {
+            gsap.fromTo(targets, 
+              { opacity: 0, y: 35 },
               {
                 scrollTrigger: {
                   trigger: section,
-                  start: "top 80%",
+                  start: "top 90%",
                   toggleActions: "play none none none",
                 },
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                stagger: 0.2,
-                ease: "power3.out",
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                stagger: 0.1,
+                ease: "power2.out",
+                clearProps: "opacity,transform"
               }
             );
-          });
-
-          gsap.to("#home", {
-            scrollTrigger: {
-              trigger: "#home",
-              scrub: true,
-              start: "top top",
-              end: "bottom top",
-            },
-            backgroundPositionY: "20%",
-          });
-        } else {
-          console.error("GSAP or ScrollTrigger not loaded");
-          document.querySelectorAll("section").forEach((section) => {
-            section.style.opacity = "1";
-          });
-        }
-
-        // Active navigation link highlighting
-        const sections = document.querySelectorAll("section");
-        const navLinksItems = document.querySelectorAll(".nav-link");
-
-        window.addEventListener("scroll", () => {
-          let current = "";
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (
-              window.scrollY >= sectionTop - 100 &&
-              window.scrollY < sectionTop + sectionHeight - 100
-            ) {
-              current = section.getAttribute("id");
-            }
-          });
-
-          navLinksItems.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === current) {
-              link.classList.add("active");
-            }
-          });
+          }
         });
+      } else {
+        console.error("GSAP or ScrollTrigger not loaded");
+        document.querySelectorAll("section").forEach((section) => {
+          section.style.opacity = "1";
+        });
+      }
 
-        // Close modal on outside click
-        window.addEventListener("click", (e) => {
-          if (e.target === document.getElementById("projectModal")) {
-            closeProjectModal();
+      // Active navigation link highlighting
+      const sections = document.querySelectorAll("section");
+      const navLinksItems = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (
+            window.scrollY >= sectionTop - 100 &&
+            window.scrollY < sectionTop + sectionHeight - 100
+          ) {
+            current = section.getAttribute("id");
           }
         });
 
-        // Close modal on Escape key
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") {
-            closeProjectModal();
+        navLinksItems.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Close modal on outside click
+      window.addEventListener("click", (e) => {
+        if (e.target === document.getElementById("projectModal")) {
+          closeProjectModal();
+        }
+      });
+
+      // Close modal on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeProjectModal();
+          closeFullscreenImage();
+        }
+      });
+
+      // Fullscreen viewer close button
+      const fullscreenClose = document.getElementById('fullscreenClose');
+      if (fullscreenClose) {
+        fullscreenClose.addEventListener('click', closeFullscreenImage);
+      }
+
+      // Close fullscreen on background click
+      const fullscreenViewer = document.getElementById('fullscreenViewer');
+      if (fullscreenViewer) {
+        fullscreenViewer.addEventListener('click', function (e) {
+          if (e.target === this) {
             closeFullscreenImage();
           }
         });
 
-        // Fullscreen viewer close button
-        const fullscreenClose = document.getElementById('fullscreenClose');
-        if (fullscreenClose) {
-          fullscreenClose.addEventListener('click', closeFullscreenImage);
-        }
+        // Add touch swipe support
+        fullscreenViewer.addEventListener('touchstart', handleTouchStart, false);
+        fullscreenViewer.addEventListener('touchend', handleTouchEnd, false);
+      }
 
-        // Close fullscreen on background click
-        const fullscreenViewer = document.getElementById('fullscreenViewer');
-        if (fullscreenViewer) {
-          fullscreenViewer.addEventListener('click', function(e) {
-            if (e.target === this) {
-              closeFullscreenImage();
-            }
-          });
+      // Add touch swipe support for Modal Image Slider
+      const imageSlider = document.getElementById('imageSlider');
+      if (imageSlider) {
+        imageSlider.addEventListener('touchstart', handleSliderTouchStart, { passive: true });
+        imageSlider.addEventListener('touchend', handleSliderTouchEnd, { passive: true });
+      }
+    });
+  </script>
+</body>
 
-          // Add touch swipe support
-          fullscreenViewer.addEventListener('touchstart', handleTouchStart, false);
-          fullscreenViewer.addEventListener('touchend', handleTouchEnd, false);
-        }
-      });
-    </script>
-  </body>
 </html>
